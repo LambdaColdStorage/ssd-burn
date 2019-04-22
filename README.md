@@ -7,9 +7,6 @@ Usage
 
 ```bash
 ./ssd_burn.sh SSD_NAME NUM_ITER
-
-# add result txt files to the data folder
-
 python parse_results.py SSD_NAME
 
 
