@@ -18,7 +18,6 @@ def main():
 	args = parser.parse_args()
 	
 	ssd_name = args.ssd_name
-	num_iter = args.num_iter
 
 	# seq write
 	r = parse('data/' + args.ssd_name + '_seq_w.txt', "WRITE:")

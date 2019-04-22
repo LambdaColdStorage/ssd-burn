@@ -1,0 +1,35 @@
+TEST: (g=0): rw=write, bs=(R) 1024KiB-1024KiB, (W) 1024KiB-1024KiB, (T) 1024KiB-1024KiB, ioengine=libaio, iodepth=32
+fio-3.1
+Starting 1 process
+
+TEST: (groupid=0, jobs=1): err= 0: pid=5664: Mon Apr 22 13:59:12 2019
+  write: IOPS=831, BW=832MiB/s (872MB/s)(97.5GiB/120029msec)
+    slat (usec): min=36, max=48027, avg=151.16, stdev=911.25
+    clat (usec): min=1722, max=1286.3k, avg=38325.53, stdev=29505.79
+     lat (usec): min=1779, max=1286.4k, avg=38477.04, stdev=29498.71
+    clat percentiles (msec):
+     |  1.00th=[    5],  5.00th=[   10], 10.00th=[   11], 20.00th=[   20],
+     | 30.00th=[   26], 40.00th=[   32], 50.00th=[   38], 60.00th=[   43],
+     | 70.00th=[   48], 80.00th=[   54], 90.00th=[   63], 95.00th=[   73],
+     | 99.00th=[   92], 99.50th=[  102], 99.90th=[  138], 99.95th=[  155],
+     | 99.99th=[ 1267]
+   bw (  KiB/s): min=450560, max=3233792, per=100.00%, avg=858687.65, stdev=439425.71, samples=238
+   iops        : min=  440, max= 3158, avg=838.55, stdev=429.13, samples=238
+  lat (msec)   : 2=0.02%, 4=0.42%, 10=9.47%, 20=11.93%, 50=52.41%
+  lat (msec)   : 100=25.18%, 250=0.54%, 2000=0.03%
+  cpu          : usr=4.24%, sys=7.42%, ctx=96480, majf=0, minf=11
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=100.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued rwt: total=0,99814,0, short=0,0,0, dropped=0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+  WRITE: bw=832MiB/s (872MB/s), 832MiB/s-832MiB/s (872MB/s-872MB/s), io=97.5GiB (105GB), run=120029-120029msec
+
+Disk stats (read/write):
+  nvme0n1: ios=88/742017, merge=0/314, ticks=1944/27742148, in_queue=29011948, util=98.98%
+TEST: (g=0): rw=write, bs=(R) 1024KiB-1024KiB, (W) 1024KiB-1024KiB, (T) 1024KiB-1024KiB, ioengine=libaio, iodepth=32
+fio-3.1
+Starting 1 process
+TEST: Laying out IO file (1 file / 102400MiB)
