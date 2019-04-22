@@ -1,7 +1,7 @@
 import argparse
 import re
 
-def parse(file_name, key_word, num_iter):
+def parse(file_name, key_word):
 	r = []
 	with open(file_name) as search:
 	    for line in search:
@@ -14,8 +14,6 @@ def main():
 	parser = argparse.ArgumentParser(description='Process some integers.')
 	parser.add_argument('ssd_name', type=str,
 	                    help='name of the ssd')
-	parser.add_argument('num_iter', type=int,
-	                    help='number of iterations')
 
 	args = parser.parse_args()
 	
@@ -23,22 +21,22 @@ def main():
 	num_iter = args.num_iter
 
 	# seq write
-	r = parse('data/' + args.ssd_name + '_seq_w.txt', "WRITE:", 3)
+	r = parse('data/' + args.ssd_name + '_seq_w.txt', "WRITE:")
 	print("seq write: ")
 	print(r)
 
 	# seq read
-	r = parse('data/' + args.ssd_name + '_seq_r.txt', "READ:", 3)
+	r = parse('data/' + args.ssd_name + '_seq_r.txt', "READ:")
 	print("seq read: ")
 	print(r)
 
 	# random write
-	r = parse('data/' + args.ssd_name + '_rand_w.txt', "WRITE:", 3)
+	r = parse('data/' + args.ssd_name + '_rand_w.txt', "WRITE:")
 	print("random write: ")
 	print(r)
 
 	# random read
-	r = parse('data/' + args.ssd_name + '_rand_r.txt', "READ:", 3)
+	r = parse('data/' + args.ssd_name + '_rand_r.txt', "READ:")
 	print("random read: ")
 	print(r)
 
