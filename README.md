@@ -11,7 +11,7 @@ python parse_results.py SSD_NAME
 
 
 # Example:
-./ssd_burn.ssh HP_EX950_2TB_vertical_loaded 10
+./ssd_burn.sh HP_EX950_2TB_vertical_loaded 10
 python parse_results.py HP_EX950_2TB_vertical_loaded
 ```
 
